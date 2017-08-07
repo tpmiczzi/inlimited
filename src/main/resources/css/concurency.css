@@ -1,0 +1,318 @@
+html,body{
+  margin:0;
+  padding:0;
+  background-color:#e0e0e8;
+    font-family: "Myriad Pro", "Calibri";
+    min-width: 1280px;
+}
+A {
+    color: #1f5b55;
+    text-decoration: none;
+}
+
+A:visited{
+    color: #1f5b55;
+}
+
+A:active{
+    color: #1f5b55;
+}
+
+td{
+    width: 12%;
+    margin: 1px;
+
+}
+
+.lownumbers{
+    background-image: url("/resources/images/layer_158_copy_8.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: bottom;
+}
+
+
+
+.textfilters{
+  color: #1f5b55;
+  font-family: "Myriad Pro", "Calibri";
+  font-size: 16px;
+}
+.leftmenuitems{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+.leftmenuitems a{
+    color: #FFFFFF;
+}
+.leftmenuitems img{
+    position: relative;
+    top: 3px;
+    left: 0px;
+}
+.leftmenuitems:after{
+    display:none;
+
+}
+.leftmenuitems:hover{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    background: rgba(0,0,0,0.2  );
+}
+
+#pagewidth{
+  width:100%;
+  text-align:left;
+  margin:0 auto;
+}
+#header{
+  position:relative;
+  height:8%;
+  background-color: #f5f5f7;
+  width:100%;
+  display:block;
+  overflow:auto;
+  }
+#leftcol{
+    width:15%;
+    height: 100%;
+    float:left;
+    position:absolute;
+    min-height: 1300px;
+
+    font-size: 16px;
+    background-color:#6f757f;
+    background-image: url(/resources/images/background.png);
+
+    }
+#twocols{
+  width:85%;
+  float:right;
+  position:relative;
+    min-height: 1300px;
+  height: 100%;
+  }
+
+#maincol{
+  background-color:#e0e0e8;
+    float:left;
+    position:relative;
+    min-width: 1040px;
+    height: 1300px;
+
+}
+#filtersname{
+color: white;
+margin: 0px;
+font-family: Arial;
+align-content: center;
+font-size: 18px;}
+
+#graphic{
+  min-width: 80%;
+  margin-left: 20px;
+  background: #ffffff;
+  min-height: 180px;    margin-right: 28px;
+
+}
+
+#graphic2{
+
+    margin-left: 20px;
+    background: #ffffff;
+    min-height: 200px;
+    margin-right: 28px;
+
+}
+
+
+
+#graphic3{
+
+    margin-left: 20px;
+    background: #ffffff;
+    min-height: 200px;
+    margin-right: 28px;
+    margin-top: 45px;
+
+}
+
+#graphic4{
+    min-width:80%;
+    margin: 60px;
+    background: #ffffff;
+    min-height: 200px;
+
+}
+#textquery {
+  margin-left: 20px; height: 30px; font-size: 25px;
+}
+
+.resultitem{
+    min-width: 80%;
+    margin: 20px;
+    background: #ffffff;
+
+}
+
+.ui-datepicker {
+    background: #ffffff;
+    border: 1px solid #555;
+    color: #EEE;
+}
+
+.graph3cells{
+    width: 33%;
+}
+
+.graph3colour{
+    width: 10px;
+    height: 10px;
+}
+
+
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    }
+  .clearfix{
+    display:inline-block;
+    }
+
+  * html .clearfix{height:1%;}.clearfix{display:block;}@media print{#leftcol{display:none;}#rightcol{display:none;}#twocols,#maincol{width:100%;float:none;}}
+
+
+.labelsup{
+    margin-left: 20px;
+    font: bold;
+    color: dimgray;
+
+}
+
+.remindersbuttons{
+    float: right;
+    height: 30px;
+    width: 75px;
+    margin-left: 2px;
+    color: white;
+    background-color: #4cae4c;
+    border: 1px solid #8c8c8c;
+    border-radius: 1px;
+}
+
+select {
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background-color: #785ea0;
+    color:#ffffff;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+     padding-left: 20px;
+     font-size: 12px;
+     width: 100%;
+    background-color: transparent;
+     border: none;
+     cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+/*    display: inline-block;*/
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    min-width: 100%;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content label {
+    color: white;
+    font-size: 12px;
+    padding: 12px 60px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content label:hover {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 70px;
+    background: rgba(0,0,0,0.2  );}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background: rgba(0,0,0,0.2);
+}
+
+#concgraphic0{
+
+    margin-left: 20px;
+    background: #ffffff;
+    min-height: 200px;
+    margin-right: 28px;
+
+}
+
+
+#concgraphic1{
+
+    margin-left: 20px;
+    background: #ffffff;
+    min-height: 200px;
+    margin-right: 28px;
+
+}
+
+
+#concgraphic2{
+
+    margin-left: 20px;
+    background: #ffffff;
+    min-height: 200px;
+    margin-right: 28px;
+
+}
+
+
+#concgraphic3{
+
+    margin-left: 20px;
+    background: #ffffff;
+    min-height: 200px;
+    margin-right: 28px;
+
+}

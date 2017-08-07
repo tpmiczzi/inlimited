@@ -1,0 +1,383 @@
+html,body{
+  margin:0;
+  padding:0;
+  background-color: #ffffff;
+    font-family: "Myriad Pro", "Calibri";
+    min-width: 1280px;
+}
+A {
+    color: #1f5b55;
+    text-decoration: none;
+}
+
+A:visited{
+    color: #1f5b55;
+}
+
+A:active{
+    color: #1f5b55;
+}
+
+td{
+    width: 14%;
+    margin: 1px;
+
+}
+
+.lownumbers{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: bottom;
+    text-align: center;
+    color: #92cea5;
+}
+
+
+
+.textfilters{
+  color: #1f5b55;
+  font-family: "Myriad Pro", "Calibri";
+  font-size: 16px;
+}
+.leftmenuitems{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+.leftmenuitems a{
+    color: #FFFFFF;
+}
+.leftmenuitems img{
+    position: relative;
+    top: 3px;
+    left: 0px;
+}
+.leftmenuitems:after{
+    display:none;
+
+}
+.leftmenuitems:hover{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    background: rgba(0,0,0,0.2  );
+}
+
+#pagewidth{
+  width:100%;
+  text-align:left;
+  margin:0 auto;
+}
+#header{
+  position:relative;
+  height:8%;
+  background-color: #f5f5f7;
+  width:100%;
+  display:block;
+  overflow:auto;
+  }
+#leftcol{
+    width:10%;
+    height: 100%;
+
+    position:absolute;
+    min-height: 1700px;
+    min-width: 240px;
+    font-size: 16px;
+    background-color:#6f757f;
+    background-image: url(/resources/images/background.png);
+
+    }
+#twocols{
+  width:80%;
+  float:right;
+  position:relative;
+    min-height: 1300px;
+  height: 100%;
+  }
+#rightcol{
+  width:25%;
+  float:right;
+  position:relative;
+  background-color:#ffffff;
+  height: 100%;
+  }
+#maincol{
+  background-color:#ffffff;
+  float:left;
+  position:relative;
+    min-width: 1040px;
+  height: 1700px;
+}
+#filtersname{
+color: white;
+margin: 0px;
+font-family: Arial;
+align-content: center;
+font-size: 18px;}
+
+#graphic{
+  min-width: 80%;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+  background: #ffffff;
+  height:320px;
+    font-size: 20px;
+    border: solid 1px #e0e0e8;
+    border-top: 0px;
+
+}
+
+#graphiclabel{
+    background-color: #4cae4c;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 16px;
+    vertical-align: middle;
+line-height: 40px;
+    text-align: left;
+    min-width: 80%;
+    margin-top:25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+#graphic2{
+    min-width: 80%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+    background: #ffffff;
+    min-height: 250px;
+
+}
+#graphic2label{
+    background-color: #785ea0;
+    height: 40px;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 16px;
+    vertical-align: middle;
+    float: left;
+
+
+    margin-right: 0px;
+    line-height: 40px;
+    text-align: left;
+}
+
+#graphic2label2{
+    background-color: #f190ac;
+    height: 40px;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 16px;
+    vertical-align: middle;
+    float: right;
+    margin-left: 0px;
+
+    line-height: 40px;
+    text-align: left;
+}
+
+#graphic3{
+    min-width:80%;
+
+    margin-left: 20px;
+    margin-bottom: 60px;
+    margin-right: 20px;
+    background: #ffffff;
+    height: 275px;
+    border: solid 1px #e0e0e8;
+
+}
+
+#graphic3label{
+    background-color: #8d8aa0;
+    height: 40px;
+    color: #FFFFFF;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: left;
+    min-width: 80%;
+    margin-top: 115px;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 40px;
+}
+
+
+#graphic4{
+    min-width:80%;
+    margin: 120px;
+    background: #ffffff;
+    min-height: 200px;
+
+}
+
+#graphic5{
+    min-width:80%;
+    margin: 60px;
+    background: #ffffff;
+    height: 400px;
+    color: '#d9534f','#ec971f','#00bfff','#ffff00','#20ba00'
+}
+#textquery {
+  margin-left: 20px; height: 30px; font-size: 25px;
+}
+
+#graphic2left{
+    width: 50%;
+    float: left;
+    border: solid 1px #e0e0e8;
+    border-top: 0px;
+}
+
+#graphic2leftlabel{
+    width: 51%;
+    float: left;
+    background-color: #4cae4c;
+
+
+}
+
+#graphic2right{
+    width: 45%;
+    float: right;
+    border: solid 1px #e0e0e8;
+    border-top: 0px;
+}
+
+.tableRowsClassCss{
+
+    text-align: center;
+    height: 25px;
+
+}
+
+.tableOddRows1{
+    text-align: left;
+    height: 25px;
+    background-color: rgba(246,253,248,0.9);
+
+}
+.tableOddRows2{
+    text-align: left;
+    height: 25px;
+    background-color: rgba(249,248,254,0.9);
+}
+.tableOddRows3{
+     text-align: left;
+     height: 25px;
+     background-color: rgba(254,249,251,0.9);
+ }
+.tableOddRows4{
+      text-align: left;
+      height: 25px;
+      background-color: rgba(248,248,248,0.9);
+  }
+
+.resultitem{
+    min-width: 80%;
+    margin: 20px;
+    background: #ffffff;
+
+}
+
+.ui-datepicker {
+    background: #ffffff;
+    border: 1px solid #555;
+    color: #EEE;
+}
+
+.graph3cells{
+    width: 33%;
+}
+
+.graph3colour{
+    width: 10px;
+    height: 10px;
+}
+
+
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    }
+  .clearfix{
+    display:inline-block;
+    }
+
+  * html .clearfix{height:1%;}.clearfix{display:block;}@media print{#leftcol{display:none;}#rightcol{display:none;}#twocols,#maincol{width:100%;float:none;}}
+
+
+.classgraph1header{
+
+    height: 25px;
+    color: #4cae4c;
+    text-align: left;
+    background-color: rgba(246,253,248,0.9);
+
+}
+
+.tableRowsClassCss{
+    height: 25px;
+    text-align: left;
+}
+
+.classgraph2header{
+
+    height: 25px;
+    color: #785ea0;
+    text-align: left;
+    background-color: rgba(249,248,254,0.9);
+}
+
+.classgraph3header{
+
+    height: 25px;
+    color: #f190ac;
+    text-align: left;
+    background-color: rgba(254,249,251,0.9);
+}
+
+.classgraph4header{
+
+    height: 25px;
+    color: #8d8aa0;
+    text-align: left;
+    background-color: rgba(248,248,248,0.9);
+}
+
+
+.column0class{
+    width:10%;
+    color: red;
+}
+
+.upperitemstable2{
+
+    background-color: #e0e0e8;
+    height: 63px;
+    min-width:231px;
+    width: 25%;
+    display: block;
+    line-height: 55px;
+
+
+
+
+}
+
+
+
