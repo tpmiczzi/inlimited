@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+	   http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	   http://www.springframework.org/schema/context
+	   http://www.springframework.org/schema/context/spring-context.xsd
+	   http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+
+    <!-- themes can be put in different folder such as
+        <mvc:resources mapping="/resources/**" location="/resources/themeBlue" />
+        <mvc:resources mapping="/resources/**" location="/resources/themeGreen" />
+     -->
+    <context:property-placeholder location="classpath:Database.properties" />
+
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.postgres.driverClass}" />
+        <property name="url" value="${jdbc.postgres.url}" />
+        <property name="username" value="${jdbc.postgres.username}" />
+        <property name="password" value="${jdbc.postgres.password}" />
+    </bean>
+
+
+
+    <!-- activate @Transactional JPA annotation -->
+    <tx:annotation-driven/>
+
+
+    <!--Do not forget activate @Transactional JPA annotation with <annotation-driven/>-->
+    <!-- JPA Persistence Context and EntityManager configuration -->
+   <!-- <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" >
+
+        <property name="packagesToScan" value="ua.com.danserhiy.idol" />
+        <property name="dataSource" ref="dataSource" />
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" >
+                <property name="generateDdl" value="true" />
+                <property name="showSql" value="true" />
+            </bean>
+        </property>
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL93Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">false</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+    </bean>
+-->
+
+
+    <!-- Automatic Transaction Participation
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+-->
+    <!-- REST template configuration -->
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/>
+
+
+
+    <bean id="httpClientFactory" class="com.autonomy.aci.client.transport.impl.HttpClientFactory" p:maxConnectionsPerRoute="20"
+          p:maxTotalConnections="120"
+          p:staleCheckingEnabled="true" />
+    <bean id="httpClient" factory-bean="httpClientFactory" factory-method="createInstance" />
+    <bean id="aciService" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient" /> </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${idol.host}"
+                  p:port="${idol.aciPort}" /> </constructor-arg>
+    </bean>
+
+    <bean id="httpClient2" factory-bean="httpClientFactory" factory-method="createInstance" />
+    <bean id="aciService2" class="com.autonomy.aci.client.services.impl.AciServiceImpl">
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.impl.AciHttpClientImpl"
+                  p:httpClient-ref="httpClient2" /> </constructor-arg>
+        <constructor-arg>
+            <bean class="com.autonomy.aci.client.transport.AciServerDetails"
+                  p:host="${idol.host}"
+                  p:port="${idol.aciPort}" /> </constructor-arg>
+    </bean>
+
+
+
+
+
+
+
+</beans>
