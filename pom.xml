@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
-            <version>4.2.3.RELEASE</version>
+            <version>4.0.4.RELEASE</version>
         </dependency>
 
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/org.springframework.web &ndash;&gt;-->
