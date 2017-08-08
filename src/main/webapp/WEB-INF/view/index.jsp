@@ -1,4 +1,4 @@
-<%@ page import="ua.com.danserhiy.idol.Connect.RecordItem" %>
+<%@ page import="ua.inlimited.idol.connect.RecordItem" %>
 <!DOCTYPE html>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
